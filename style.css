@@ -7,12 +7,135 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
+  background-color: rgb(0, 100, 66);
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-.fundo {
+.luz-verde {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  border-radius: 100%;
+  animation: LuzVerde 2s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes LuzVerde {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#luz-verde {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 100px;
+}
+.lanterna-verde {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: bisque;
+  position: absolute;
+}
+
+#fundo {
+  display: flex;
+  z-index: 9999;
+  top: 300px;
+  width: 800px;
+  height: 700px;
+  z-index: 998;
+}
+
+.imgVilao {
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  right: 0px;
+  top: 40px;
+}
+
+#imgVilao {
+  position: absolute;
+  animation: imgVilao 2s infinite;
+}
+
+@keyframes imgVilao {
+  0% {
+    top: 10px;
+  }
+  25% {
+    top: 15px;
+  }
+  50% {
+    top: 10px;
+  }
+  75% {
+    top: 15px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+.imgVilaoQuadrinhos {
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+}
+
+.fumaca {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.logo-filme {
+  display: flex;
+}
+#logo-filme {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 350px);
+  z-index: 999;
+}
+#fumaca {
+  width: 100vw;
+  height: 100vh;
+  animation: fumaca 3s infinite ease-in;
+}
+
+@keyframes fumaca {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
